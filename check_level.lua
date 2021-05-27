@@ -1,16 +1,21 @@
-while true do
-    wait(5)
+_G.Auto = true
+while _G.Auto do
+    wait()
         function level_check()
             local plrLvl = game.Players.LocalPlayer.Data.Level.Value
-            local plr = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            local plr = game.Players.LocalPlayer.Character
                 if plrLvl <= 15 then
                  print("Your are now level", plrLvl)
-                 fireclickdetector(game:GetService("Workspace").Quest["Bandit Quest"].ClickDetector)
                  for i,v in pairs(game:GetService("Workspace").Lives:GetChildren()) do
-                    if v.Name == "Bandit LV. 1" then
-                        wait(1)
-                        game:GetService("Workspace").Lives["Bandit LV. 1"].HumanoidRootPart.CFrame = plr
-                    end
+                    repeat
+                        if v.Name == "Bandit LV. 1" then
+                            fireclickdetector(game:GetService("Workspace").Quest["Bandit Quest"].ClickDetector)
+                            wait(1)
+                            plr.Humanoid:EquipTool(game.Platers.LocalPlayer.Backpack[Fist])
+                            plr.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame + v.HumanoidRootPart.CFrame.lookvector * 5
+                        end
+                    until 
+                        plrLvl > 15
                 end
                 end
                 if plrLvl > 15 and plrLvl <= 25 then

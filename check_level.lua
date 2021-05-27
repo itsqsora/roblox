@@ -8,11 +8,12 @@ while _G.Auto do
                  print("Your are now level", plrLvl)
                  for i,v in pairs(game:GetService("Workspace").Lives:GetChildren()) do
                     repeat
+                        wait()
                         if v.Name == "Bandit LV. 1" then
                             fireclickdetector(game:GetService("Workspace").Quest["Bandit Quest"].ClickDetector)
-                            wait(1)
-                            plr.Humanoid:EquipTool(game.Platers.LocalPlayer.Backpack[Fist])
-                            plr.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame + v.HumanoidRootPart.CFrame.lookvector * 5
+                            wait(0)
+                            game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack['Fist'])
+                            plr.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame + v.HumanoidRootPart.CFrame.lookvector * 5
                         end
                     until 
                         plrLvl > 15

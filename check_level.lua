@@ -42,7 +42,7 @@ function getkill(named)
         local user = game:GetService("VirtualUser")
         local player = game.Players.LocalPlayer
         local mouse = player:GetMouse()
-user:ClickButton1(Vector2.new(mouse.x,mouse.y))
+        user:ClickButton1(Vector2.new(mouse.x,mouse.y))
         if v.Name == named then
             user:CaptureController()
             user:ClickButton1(Vector2.new(mouse.x,mouse.y))

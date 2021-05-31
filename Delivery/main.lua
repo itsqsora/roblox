@@ -1,0 +1,1 @@
+local plr =game:Getservice("Players").localPlayer.Character.HumanoidRootPart

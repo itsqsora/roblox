@@ -72,14 +72,7 @@ end)
 e:Button("Tp Base",function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Nests[Base].Base.CFrame.Position + Vector3.new(0,6,0))
 end)
---Credits
-u:Button(game:service("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/Maxgat5/Decode/main/JSON")).username,function()
-    setclipboard(game:service("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/Maxgat5/Decode/main/JSON")).username)
-end)
  
-u:Button("Discord Server",function()
-    setclipboard(game:service("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/Maxgat5/Decode/main/JSON")).discord)
-end)
 
 game:GetService('RunService').Stepped:connect(function()
     spawn(function()
